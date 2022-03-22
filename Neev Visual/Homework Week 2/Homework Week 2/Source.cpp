@@ -26,13 +26,13 @@ WorkerList* addWorker(WorkerList* head, Worker* worker) {
 }
 void printWorker(Worker* w, int flag)
 {
-	printf("%d\n", w->ID);
-	printf("%s\n", w->name);
-	printf("%d\n", w->salary);
+	printf("ID: %d\n", w->ID);
+	printf("Name: %s\n", w->name);
+	printf("Salary: %d\n", w->salary);
 	if (flag == 0)
 		printf("%s\n", w->startdate.hebdate);
 	else
-		printf("%d\n", w->startdate.date);
+		printf("Start Date: %d\n", w->startdate.date);
 }
 void printList(WorkerList *list) {
 	
@@ -58,17 +58,16 @@ Worker* createWorker(int id, char* name1, int salary, Date startdate) {
 	newworker->startdate = startdate;
 	return newworker;
 }
-WorkerList* deleteWorstWorker(WorkerList* head) {
-	/*Worker* worst = head->workerdata;
-	head = head->next;
 
-	while (head != NULL) {
-		if (head->workerdata->salary < worst->salary)
-			worst = head->workerdata;
-		head = head->next;
-	}*
-
-}
+//WorkerList* deleteWorstWorker(WorkerList* head) {
+//	/*Worker* worstworker = head->workerdata, *secondworstworker = NULL;
+//	secondworstworker = head->workerdata;
+//
+//	while (head != NULL) {
+//		if ()
+//	}*/
+//
+//}
 int index (WorkerList* head, long unsigned id) {
 	int count = 0;
 	for (int i = 0; head != NULL; i++) {
@@ -94,6 +93,13 @@ int recursiveIndex(WorkerList* head, long unsigned id) {
 		return -1;
 	else return recursiveIndex(head->next, id) + 1;
 }
+void updateWorkers(WorkerList* head, int percent) {
+	while (head != NULL) {
+		//head->workerdata->salary *= (percent / 100);
+		printf("%d", head->workerdata->salary);
+		head = head->next;
+	}
+}
 int main() {
 
 	Worker *newworker, *worker2, *worker3, *worker4;
@@ -116,8 +122,10 @@ int main() {
 	list = addWorker(list, worker3);
 	list = addWorker(list, worker4);
 
-	int i = recursiveIndex(list, 3412);
-	printf("%d", i);
-
+	//deleteWorstWorker(list);
+	printList(list);
+	updateWorkers(list, 110); // Increment will be all values over 100 percent. Decrement for all values below.
+	printList(list);
+	
 	return 0;
 }
