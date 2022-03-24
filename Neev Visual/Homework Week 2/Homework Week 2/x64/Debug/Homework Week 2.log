@@ -1,8 +1,5 @@
-﻿  Source.cpp
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(9,2): warning C4091: 'typedef ': ignored on left of 'Date' when no variable is declared
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(15,2): warning C4091: 'typedef ': ignored on left of 'Worker' when no variable is declared
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(19,2): warning C4091: 'typedef ': ignored on left of 'WorkerList' when no variable is declared
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(107,17): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(107,22): warning C4305: 'initializing': truncation from 'int' to 'char'
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source.cpp(107,17): warning C4309: 'initializing': truncation of constant value
+﻿  Source2.cpp
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(9,2): warning C4091: 'typedef ': ignored on left of 'Date' when no variable is declared
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(15,2): warning C4091: 'typedef ': ignored on left of 'Worker' when no variable is declared
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(19,2): warning C4091: 'typedef ': ignored on left of 'WorkerList' when no variable is declared
   Homework Week 2.vcxproj -> D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\x64\Debug\Homework Week 2.exe
