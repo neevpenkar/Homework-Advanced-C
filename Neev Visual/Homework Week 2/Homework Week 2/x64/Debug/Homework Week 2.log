@@ -1,5 +1,5 @@
 ﻿  Source2.cpp
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(9,2): warning C4091: 'typedef ': ignored on left of 'Date' when no variable is declared
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(15,2): warning C4091: 'typedef ': ignored on left of 'Worker' when no variable is declared
-D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(19,2): warning C4091: 'typedef ': ignored on left of 'WorkerList' when no variable is declared
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(8,2): warning C4091: 'typedef ': ignored on left of 'Date' when no variable is declared
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(14,2): warning C4091: 'typedef ': ignored on left of 'Worker' when no variable is declared
+D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\Homework Week 2\Source2.cpp(18,2): warning C4091: 'typedef ': ignored on left of 'WorkerList' when no variable is declared
   Homework Week 2.vcxproj -> D:\Github Proj\Homework-Advanced-C\Neev Visual\Homework Week 2\x64\Debug\Homework Week 2.exe
