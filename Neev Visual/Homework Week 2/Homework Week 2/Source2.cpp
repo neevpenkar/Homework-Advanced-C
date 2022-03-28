@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define WorkerList wl
+
 typedef union Date {
 	int date;
 	char hebYear[4];
@@ -68,25 +70,36 @@ void printList(WorkerList* head) {
 }
 WorkerList* deleteWorstWorker(WorkerList* head) {
 	//Worker* worst = head->workerdata;
-	WorkerList* tmp = head, * temp;
-	temp = head;
-	if (!head)
-		return head;
-	while (tmp->next != NULL) {
-		if (tmp->next->workerdata->salary < temp->workerdata->salary)
-			temp = tmp;
-		tmp = tmp->next;
-	}
-	if (tmp->workerdata->salary < temp->workerdata->salary) {
-		temp = tmp;
-		temp->next = temp->next->next;
-	}
-	else
-		temp->next = temp->next->next;
-	free(temp);
+	//WorkerList* tmp = head;
+	//WorkerList* temp;
+	//temp = head;
+
+	//Worker* worstworker = head->next->workerdata;
+	//temp = temp->next;
+
+	//while (temp != NULL) {
+	//	if (temp->workerdata->salary < worstworker->salary)
+	//		worstworker = temp->workerdata;
+	//}
+
+	//WorkerList* temporary = worstworker-
+
+	//if (head != NULL)
+	//	return head;
+	//while (tmp->next != NULL) {
+	//	if (tmp->next->workerdata->salary < temp->workerdata->salary)
+	//		temp = tmp;
+	//	tmp = tmp->next;
+	//}
+	//if (tmp->workerdata->salary > temp->workerdata->salary) {
+	//	temp = tmp;
+	//	temp->next = temp->next->next;
+	//}
+	//else
+	//	temp->next = temp->next->next;
+	//free(temp);
 	return head;
 }
-
 WorkerList* addWorker(WorkerList* head, Worker* newworker) {
 	WorkerList* newlist = (WorkerList*)malloc(sizeof(WorkerList));
 	newlist->workerdata = newworker;
@@ -106,6 +119,28 @@ WorkerList* addWorker(WorkerList* head, Worker* newworker) {
 		return head;
 	}
 }
+void update_worker(WorkerList* head, float percentage) {
+	wl* temp = head;
+	while (temp != NULL) {
+		temp->workerdata->salary *= percentage / 100;
+		temp = temp->next;
+	}
+}
+
+wl* reverse_list(wl* head) {
+	wl* temp = head;
+	wl* neev = head->next;
+
+	while (temp->next->next != NULL) {
+		temp = temp->next;
+	}
+	wl* tor = temp;
+	while (temp != neev) {
+		temp->next = temp;
+	}
+	temp->next->next = NULL;
+	return tor;
+}
 
 int main() {
 	char name1[] = "Neev Penkar";
@@ -116,15 +151,20 @@ int main() {
 	Worker* newworker1 = createWorker(841, 200, name1, {2020});
 	Worker* newworker2 = createWorker(763, 4000, name2, { 2019 });
 	Worker* newworker3 = createWorker(925, 40000, name3, { 1996 });
-	Worker* worker4 = createWorker(487, 1200, name4, { 1996 });
+	Worker* newworker4 = createWorker(487, 1200, name4, { 1996 });
 
 	WorkerList* list = (WorkerList*)malloc(sizeof(WorkerList));
 	*list = {newworker1, NULL};
 
-	list = addWorker(list, worker4);
+	list = addWorker(list, newworker4);
 	list = addWorker(list, newworker2);
-	list = addWorker(list, newworker3);
+	//list = addWorker(list, newworker3);
+	//list = deleteWorstWorker(list);
 	printList(list);
+	wl* list2 = (wl*)malloc(sizeof(wl));
+	list2 = reverse_list(list);
+	printList(list2);
+
 	return 0;
 }
 void foo() {
